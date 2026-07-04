@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print welcome message
-        run: "welcome to our first github action workflow"
+        run: echo "welcome to our first github action workflow"
