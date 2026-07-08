@@ -5,8 +5,7 @@ on:
     branches:
       - main
       - "release/**"
-    paths:
-      - "src/**"
+
   pull_request:
     branches:
       - main
@@ -18,10 +17,5 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4.2.2
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - run: npm install
-
-      - run: npm test
+      - name: test
+        run: npm test
