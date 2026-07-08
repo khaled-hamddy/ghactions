@@ -18,5 +18,10 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4.2.2
 
-      - name: test
-        run: npm test
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - run: npm test
